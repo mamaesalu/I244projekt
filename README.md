@@ -2,7 +2,7 @@
 
 Rakenduses saab pidada arvestust ühe pere ülesannete üle.
 
-Projekti kirjutamise jooksvad commitid on leitavad minu [I244 repost](https://github.com/mamaesalu/I244)
+Projekti kirjutamise jooksvad commitid on leitavad minu [I244 repost](https://github.com/mamaesalu/I244) kaustast projekt.
 
 ## Olemas
 Vastavalt õigustele saab kas kõigi kasutajate või ainult enda ülesandeid lisada, muuta ja kustutada.
