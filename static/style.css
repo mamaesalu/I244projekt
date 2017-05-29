@@ -1,0 +1,78 @@
+body {
+    background: lightyellow;
+    margin:0px;
+}
+#kasutaja {
+    text-align: right;
+    background-color: lightgrey;
+}
+#wrap {
+    width: 800px;
+    background: white;
+    margin: auto;
+    overflow: auto;
+    min-height:600px;
+}
+#menu {
+    list-style: none;
+    background: darkorange;
+    margin: 0px;
+    padding: 0px;
+    text-align: left;
+}
+#menu li, #menu a {
+    display: inline-block;
+}
+#menu a {
+    padding:5px 20px;
+    color: black;
+    text-decoration: none;
+}
+#menu a:hover {
+    background: #ffdfcb;
+    color: #f67625;
+}
+#content {
+    padding:10px;
+}
+#login{
+    margin:auto;
+    width: 40%;
+    margin-top:25%;
+}
+table {
+    width: 750px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.pealkiri {
+    font-size: large;
+    color: #0A24A9;
+}
+
+.tasks, th, td {
+    border: 1px solid black;
+}
+.tbl {
+    border-color: transparent;
+    text-align: center;
+    width: 70px;
+}
+.task_col {
+    overflow:hidden;
+    width:400px;
+    word-wrap:break-word;
+}
+.clear {
+    clear:both;
+}
+.categ {
+    text-align: center;
+}
+.deadline_col {
+    text-align: center;
+}
+.validate {
+    position: absolute;
+    bottom: 100px;
+}

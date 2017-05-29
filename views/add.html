@@ -1,0 +1,31 @@
+<div id="add">
+    <p class = "pealkiri">Lisa ülesanne:</p><br>
+    <form name = "add" action="?mode=add" method="POST" >
+        <textarea id='taskid' maxlength='200' rows="4" cols="60" name="task" placeholder="Kirjuta siia ülesande sisu"><?php if (!empty($_POST['task'])) echo htmlspecialchars($_POST['task']);?></textarea><br/>
+        Saad lisada veel <span id = "char_left"></span> tähemärki!<br><br>
+        <?php if ($_SESSION['user']['role'] != 'admin'): ?>
+        <input type="hidden" name="user_id" value = "<?php echo htmlspecialchars($_SESSION['user']['id']); ?>" /><br/><br>
+        <?php else: ?><!-- adminil võimalus kõigile ülesannete lisamiseks-->
+        Vali kasutaja, kellele ülesanne lisada:
+        <select name = "user_id">
+            <?php foreach($users as $key => $user):?>
+            <option value="<?php echo htmlspecialchars($user['id']); ?>"<?php if(!empty($_POST['user_id']) && $_POST['user_id']== $user['id']) echo 'selected = "selected"';?>><?php echo htmlspecialchars($user['usern']); ?></option>
+            <?php endforeach;?>
+        </select><br><br>
+        <?php endif; ?>
+        Vali siit, millega ülesanne seotud on:
+        <select name = "categ">
+            <?php foreach($categs as $cat):?>
+            <option value="<?php echo htmlspecialchars($cat); ?>"<?php if(!empty($_POST['categ']) && $_POST['categ']== $cat) echo 'selected = "selected"';?>><?php echo htmlspecialchars($cat); ?></option>
+            <?php endforeach;?>
+        </select><br><br>
+        Määra ülesandele täitmise tähtaeg:
+        <input type="date" id = "deadline" name="deadline" value = "<?php if (!empty($_POST['deadline'])) echo htmlspecialchars($_POST['deadline']);?>"/><br/><br>
+        <input type="submit" value="Lisa ülesanne!"/><br><br>
+    </form>
+    <?php if (isset($errors)):?>
+    <?php foreach($errors as $error):?>
+    <div style="color:red;"><?php echo htmlspecialchars($error); ?></div>
+    <?php endforeach;?>
+    <?php endif;?>
+</div>
