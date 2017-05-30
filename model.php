@@ -124,7 +124,7 @@ function add_tasks(){
         if($dtInfo['warning_count'] == 0 && $dtInfo['error_count'] == 0 ){
 
         }else{
-            $errors[]= "tähtaeg ei ole sobivas formaadis! Firefoxis on formaat yyyy/mm/dd";
+            $errors[]= "tähtaeg ei ole sobivas formaadis (yyyy/mm/dd)!";
         }
         $userid = array();
         foreach ($users as $user){
