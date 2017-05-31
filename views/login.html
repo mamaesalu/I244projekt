@@ -1,8 +1,9 @@
 <div id="login">
+	<p>Sisesta kasutajanimi ja parool:</p>
     <form action="?mode=login" method="POST" >
-        <input type="text" name="user" placeholder="kasutajanimi"/><br/>
-        <input type="password" name="pass" placeholder="parool"/><br/>
-        <input type="submit" value="logi sisse!"/>
+        <input id = "login_box" type="text" name="user" placeholder="kasutajanimi"/><br/>
+        <input id = "login_box" type="password" name="pass" placeholder="parool"/><br/>
+        <input type="submit" value="Astu sisse!"/>
     </form>
     <?php if (isset($errors)):?>
     <?php foreach($errors as $error):?>

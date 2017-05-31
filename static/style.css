@@ -20,6 +20,9 @@ body {
     padding: 0px;
     text-align: left;
 }
+#menu li {
+	font-variant: small-caps;
+}
 #menu li, #menu a {
     display: inline-block;
 }
@@ -38,7 +41,11 @@ body {
 #login{
     margin:auto;
     width: 40%;
-    margin-top:25%;
+    margin-top:10%;
+}
+#login_box{
+	width: 150px;
+	border-radius: 5px;
 }
 table {
     width: 750px;
